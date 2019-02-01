@@ -25,6 +25,14 @@ module.exports = env => {
       publicPath: '/',
       //filename: 'bundle.js'
     },
+    externals: {
+      react: {
+        commonjs: 'react',
+        commonjs2: 'react',
+        amd: 'react',
+        root: 'React',
+      },
+    },
     plugins: [
       new webpack.HotModuleReplacementPlugin()
     ]
