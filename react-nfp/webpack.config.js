@@ -4,7 +4,10 @@ module.exports = env => {
   process.env.NODE_ENV = env.NODE_ENV;
   const config = {
     mode: 'production',
-    entry: './src/index.js',
+    entry: {
+      rankings: './src/rankings.js',
+      manager: './src/manager.js'
+    },
     module: {
       rules: [
         {
@@ -14,24 +17,35 @@ module.exports = env => {
         }
       ]
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'async',
+        minSize: 30000,
+        maxSize: 0,
+        minChunks: 1,
+        maxAsyncRequests: 5,
+        maxInitialRequests: 3,
+        automaticNameDelimiter: '~',
+        name: true,
+        cacheGroups: {
+          vendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true
+          }
+        }
+      }
+    },
     resolve: {
       extensions: ['*', '.js', '.jsx']
     },
     output: {
-      path: __dirname + '../../rankings/static/rankings',
-      filename: 'Ranking.js',
-      library: 'Ranking',
-      libraryTarget: 'umd',
-      publicPath: '/',
-      //filename: 'bundle.js'
-    },
-    externals: {
-      react: {
-        commonjs: 'react',
-        commonjs2: 'react',
-        amd: 'react',
-        root: 'React',
-      },
+      path: __dirname + '../../rankings/static/rankings/js',
+      filename: "[name].js"
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin()
