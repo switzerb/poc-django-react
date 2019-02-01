@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ranking Detail - RevUp</title>
+    <link rel="icon" href="https://d1wo3hghzifscm.cloudfront.net/static/img/favicon.7a88551ae73c.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://d1wo3hghzifscm.cloudfront.net/static/img/favicon.7a88551ae73c.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://d1wo3hghzifscm.cloudfront.net/static/bootstrap/dist/css/bootstrap.min.9441894d158b.css">
+    <link rel="stylesheet" type="text/css" href="https://d1wo3hghzifscm.cloudfront.net/static/bootstrap/dist/css/bootstrap-theme.min.66b84a04375e.css">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/ranking.54cc128182bc.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/callsheet.b332be52bfa4.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/legend.3943a024fd45.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/newFilters.ebe6b5f8d6c4.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/prospect.ff27ac6692d9.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/editContact.656d4345b839.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://d1wo3hghzifscm.cloudfront.net/static/bootstrap-datepicker/css/datepicker3.6423f5d46d07.css"/>
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/styles.6fbaa07b0214.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/revupWidgets.179f1d41090f.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/revupWizard.d0ba0f10a986.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/revupicons.b71d30feaab3.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/piFont.36b361f48ea2.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/manageContactMerge.584a73aa6bf1.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/skiningTool.c5acd4957582.css" rel="stylesheet">
+
+    {% load static %}
+    <link href="{% static "rankings/js/main.06760ee5.chunk.css" %}" rel"stylesheet" />
+    <script>
+        var doNoRunRevupAlert = false;
+    </script>
+</head>
+
+<script src="https://d1wo3hghzifscm.cloudfront.net/static/js/loadSkin.5f8642700d57.js"></script>
+<script>
+
+var loadingImg = "https://d1wo3hghzifscm.cloudfront.net/static/img/loadingCenterIcon.34a72cbe8f35.svg";
+
+// load the current skin
+var currentSkin = {
+    settings: {"cssRules": {"backgroundColor": {"field": [{"colorFor": "backgroundDiv", "colorVal": "#e6e7e8", "colorType": "background"}], "cssRule": ".backgroundDiv"}, "inactiveTabColor": {"field": [{"colorFor": "tabInactive", "colorVal": "#72a82d", "colorType": "borderTab"}, {"colorFor": "tabInactive", "colorVal": "#8dcb3f", "colorType": "background"}], "otherFields": [{"$field": {}, "colorVal": "#8dcb3f", "colorType": "color", "cssRule": ".pageLabel", "colorFor": "tabActive"}, {"$field": {"0": {}, "length": 1, "selector": ".previewSection .tabActive", "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1, "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1}}}, "colorVal": "#8dcb3f", "colorType": "color", "colorFor": "tabActive"}, {"$field": {"0": {}, "length": 1, "selector": ".previewSection .tabActive .icon", "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1, "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1}}}, "colorVal": "hsl(86.57142857142856, 57.37704918032785%, 41.725490196078425%)", "colorType": "clearBorderTab", "cssRule": ".mainContent .container .sideNavDiv .tab.active", "colorFor": "tabInactive"}, {"$field": {"0": {}, "length": 1, "selector": ".previewSection .tabActive .icon", "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1, "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1}}}, "colorVal": "#8dcb3f", "colorType": "color", "cssRule": ".mainContent .container .sideNavDiv .tab.active a .icon", "colorFor": "tabActive icon"}, {"$field": {"0": {}, "length": 1, "selector": ".previewSection .tabActive .text", "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1, "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1}}}, "colorVal": "#8dcb3f", "colorType": "color", "cssRule": [".mainContent .container .sideNavDiv .tab.active a .text", ".mainContent .container .sideNavDiv .tab.active a:hover .text"], "colorFor": "tabActive text"}], "cssRule": ".mainContent .container .sideNavDiv .tab"}, "scoreHighlightColor": {"field": [{"colorFor": "scoreHighlight", "colorVal": "#a4b58e", "colorType": "background"}], "cssRule": ".academicScoreColor"}, "primBtnColor": {"field": [{"colorFor": "primaryBtnField", "colorVal": "#61853a", "colorType": "border"}, {"colorFor": "primaryBtnField", "colorVal": "#79a649", "colorType": "background"}], "cssRule": [".revupBtnDefault", ".revupPrimaryBtnColor(important)", ".revupPagination .paginationDivInner .paginationPageNum.active"]}, "secBtnColor": {"field": [{"colorFor": "secBtnField", "colorVal": "#717e84", "colorType": "border"}, {"colorFor": "secBtnField", "colorVal": "#919ca1", "colorType": "background"}], "cssRule": [".revupBtnDefault.secondary", ".revupSecondaryBtnColor(important)"]}, "lnkColor": {"field": [{"colorFor": "lnkField", "colorVal": "#4d8fc2", "colorType": "color"}], "cssRule": ["a", "a:hover(important)", ".revupLnk(important)", ".revupPagination .paginationDivInner .paginationPageNum"]}}, "candidateIcon": {"candidateIconName": "Name", "candidateIconColor": "#90c3f0"}},
+    title: "Political Default",
+    description: "The default skin for political product users",
+
+        id: 11,
+
+
+        bannerUrl: "",
+
+    logoUrl: "",
+
+    defaultAccountIconText: "FH",
+};
+
+var features = {"RANKING": true, "CALL_TIME": true, "LIST_MANAGER": true, "PROSPECTS": true, "RAISERS": true, "CONTACT_MANAGER": true, "MOBILE_APP": true, "CALL_SHEET_EXPORT_RANKING": true, "CALL_SHEET_EXPORT_CALL_TIME": true, "CSV_EXPORT_RANKING": true, "CSV_EXPORT_CALL_TIME": true, "CSV_EXPORT_PROSPECTS": true, "PERSONAL_CONTACTS": true, "ACCOUNT_CONTACTS": true, "IMPORT_LINKEDIN": true, "IMPORT_GMAIL": true, "IMPORT_OUTLOOK": true, "IMPORT_VCARD": true, "IMPORT_CSV": true, "IMPORT_MOBILE": true};
+
+
+// inject the current skin css into the head
+var h = document.getElementsByTagName('head').item(0);
+var s = document.createElement("style");
+s.type = "text/css";
+s.appendChild(document.createTextNode(loadSkin(currentSkin.settings)));
+h.appendChild(s);
+</script>
+
+<script>
+    function clearLocalStorage() {
+        localStorage.removeItem('rankingFilter');
+        localStorage.removeItem('rankingFilterStyle');
+        localStorage.removeItem('rankingFilterAdvData');
+        localStorage.removeItem('rankingFilterBasicData');
+
+        localStorage.removeItem('prospectsColWidth');
+        localStorage.removeItem('rankingColWidth-v3');
+        localStorage.removeItem('fundraiserColWidth');
+    }
+</script>
+
+
+<body role="document" class="backgroundDiv" >
+        <section>
+            <div class="mainContentDiv">
+                <div class="mainContent">
+                    <div class="container" role="main" >
+
+
+    <header>
+      <div class="navbar" role="navigation">
+        <a class="navbar-brand" href="/">
+          <div class='logoDiv'>
+
+                  <img src="https://d1wo3hghzifscm.cloudfront.net/static/img/new-revup-logo.ed8d27a096ad.png" />
+
+          </div>
+        </a>
+
+        <div class="navbarMsg">
+            <div class="msgBox">
+                <div class="msgText">
+                    <div class="msgTextDiv">
+                        <div class="icon icon-info-1"></div>
+                        <div class="theMsg"></div>
+                    </div>
+                    <div class="msgBtnRight">
+                        <div class="msgBtn btnMore">more</div>
+                        <div class="msgBtn btnClose">
+                            <div class="icon icon-close"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="taskList"></div>
+            </div>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown " style="z-index:10">
+                    <div class='test' class="dropdown-toggle" data-toggle="dropdown">
+                        <span></span>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                            brenna.switzer@emergeinteractive.com
+
+                        </a>
+                    </div>
+                    <a href="#" class="dropdown-toggle caret1" data-toggle="dropdown">
+                        <b class="icon icon-triangle-dn"></b>
+                    <a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/seats/select_current/?force=1">Change Active Seat</a></li>
+
+                            <li><a href="/campaign_admin/">Edit Account Settings</a></li>
+
+
+                        <hr style="margin: 2px;">
+                        <li>
+                            <a href="#" class="forceAnalysis">Force Analysis</a>
+
+                        </li>
+                        <hr style="margin: 2px;">
+
+
+                        <li><a href="#" id="aboutRevupBtn">About RevUp</a></li>
+
+                        <hr style="margin: 2px;">
+
+
+                            <li><a href="/accounts/edit/">Edit User Information</a></li>
+                            <li><a href="#" id="editBillingDetails">Edit Billing Details</a></li>
+                                <!--<a href="/accounts/edit/">Edit Billing Details</a>-->
+
+
+                        <li><a href="/accounts/password/change/">Change Password</a></li>
+                        <li><a href="/accounts/logout/">Logout</a></li>
+
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+    </header>
+
+
+
+                            <div class="bodyContainer">
+
+                                    <div class="sideNavDiv">
+                                        <div class="homeTab tab  ">
+                                            <a href="/">
+                                                <div class="tabContent">
+                                                    <div class="icon icon-home"></div>
+                                                    <div class="text">Home</div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+                                            <div class="rankingTab tab active ">
+                                                <a href="/rankings/">
+                                                    <div class="tabContent">
+                                                        <div class="icon icon-ranking"></div>
+                                                        <div class="text">Ranking</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+
+
+                                                <div class="callTimeTab tab ">
+                                                    <a href="/call_time/manager">
+                                                        <div class="tabContent">
+                                                            <div class="icon icon-call-time-mgr"></div>
+                                                            <div class="text">Call Time</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+
+
+
+                                            <div class="contactManagerTab tab ">
+                                                <a href="/contacts/manager/">
+                                                    <div class="tabContent"  style="padding:7px 0;">
+                                                        <div class="icon icon-contact-mgmt" style="font-size:22px;line-height:22px;"></div>
+                                                        <div class="text">Contact Manager</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+
+
+                                                <div class="listManagerTab tab ">
+                                                    <a href="/contact_sets/manager">
+                                                        <div class="tabContent"  style="padding:6px 4px;">
+                                                            <div class="icon icon-list-mgmt" style="font-size:22px;line-height:22px;"></div>
+                                                            <div class="text">List Manager</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+
+
+
+
+                                                <div class="prospectsTab tab  ">
+                                                    <a href="/events/">
+                                                        <div class="tabContent"  style="padding:11px 5px 10px 8px;">
+                                                            <div class="icon icon-tracker"></div>
+                                                            <div class="text">Prospects</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+
+
+
+
+
+                                                <div class="raisersTab tab ">
+                                                    <a href="/campaign_admin/fundraisers">
+                                                        <div class="tabContent">
+                                                            <div class="icon icon-raisers"></div>
+                                                            <div class="text">Raisers</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+
+
+
+                                        <div class="help tab" style="position: absolute;">
+                                            <a href="/getting_started/#ranking-screen" target="_blank">
+                                                <div class="tabContent">
+                                                    <div class="icon icon-help-1"></div>
+                                                    <div class="icon icon-help-2" style="color: #f1f1f2; bottom: 28px;"></div>
+                                                    <div class="text" style="position: relative; bottom: 30px;">Help</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                     <!-- end of sideNavDiv -->
+
+    <!--
+
+                                        <div class="tab ">
+                                            <a href="/campaign_admin/">
+                                                <div class="tabContent">
+                                                    <div class="icon icon-admin"></div>
+                                                    <div class="text">Settings</div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+
+
+    -->
+                            </div> <!-- end of bodyContainer -->
+
+
+                                    <div class="contentDiv">
+
+    <div class="pageHeader">
+    </div>
+
+    <div id="root"></div>
+
+
+                                    </div>
+
+                    </div> <!-- end of content -->
+                </div><!-- end of mainContent -->
+
+            </div> <!-- end of mainContentDiv -->
+        </section>
+
+
+        <footer>
+            <div class="footerDiv">
+                <div class="footerText">
+                    &copy;RevUp Software <span class='currentYear'></span>. All rights reserved.
+                    &nbsp;&#124;&nbsp;
+                    Version: 1.41.1
+                    &nbsp;&#124;&nbsp;
+                    Release Date: 01/11/2019
+                    &nbsp;&#124;&nbsp;
+                    <a href="http://www.revup.com/privacy/">Privacy</a>
+                    &nbsp;&#124;&nbsp;
+                    <a href="mailto:info@revup.com">Contact Us</a>
+                </div>
+
+                <div class="footerLinks">
+                    <a href="http://twitter.com/revupsoftware" target="_blank">
+                        <div class="icon icon-twitter-bird"></div>
+                    </a>
+                    <a href="http://www.facebook.com/pages/RevUp-Software/1780911162133990" target="_blank">
+                        <div class="icon icon-facebook"></div>
+                    </a>
+                    <a href="http://www.linkedin.com/company/revup-software" target="_blank">
+                        <div class="icon icon-linkedin"></div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+          <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+
+
+        <script>
+            var urls = {
+
+
+
+
+
+
+            task: "/rest/users/486/seats/386/tasks/",
+
+        runAnalysis: "/rankings/networks/search/",
+
+            };
+
+            function site_url(url_name, replacements){
+
+                var url = urls[url_name];
+                if (!url){
+                    return null;
+                }
+                if (typeof replacements !== 'undefined'){
+                    $.each(replacements, function(index, value){
+                        index += 1;
+                        url = url.replace("placeholder" + index, value);
+                    });
+                }
+                return url
+            }
+        </script>
+
+
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/jquery/dist/jquery.6a07da9fae93.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/bootstrap/dist/js/bootstrap.min.3d8308804264.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/bootstrap/js/tooltip.f177fc48722b.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/bootstrap/js/popover.948ec1a4131c.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/mustache/mustache.1b9871af7af9.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/spectrum/spectrum.5f141b16047e.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js-cookie/src/js.cookie.4267ca2ad477.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/revup.cf64d0d4b2db.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/revupWizard.2380dc5a6966.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/revupUtils.c64885c852fb.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/revupListView.251883ea1f44.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/revupConstants.47bb203df0c7.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/apps/manageContactMerge.6d706436db36.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/creditCardPopup.55cd1029fbdb.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/modernizr.b49a1a937c58.js"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/apps/skiningTool.bc1ca6fbe21c.js" charset="utf-8"></script>
+    <script src="https://d1wo3hghzifscm.cloudfront.net/static/js/apps/entitySearch.d5a51e87d359.js" charset="utf-8"></script>
+
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/creditCardPopup.8f4a5cc9725e.css" rel="stylesheet">
+    <link href="https://d1wo3hghzifscm.cloudfront.net/static/css/apps/entitySearch.952095363a74.css" rel="stylesheet">
+
+
+
+
+    <script>
+    // images
+    taskBarImages = {
+        appleImg:       "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/apple-xsm.9eb644b71050.svg",
+        csvImg:         "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/csv-xsm.370c62c6b790.svg",
+        gmailImg:       "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/gmail-xsm.f38c7fcd827b.svg",
+        linkedInImg:    "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/linkedin-xsm.7ee6fa63461d.svg",
+        outlookImg:     "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/outlook-xsm.99553ceb118d.svg",
+        allImg:         "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/all-xsm.68509da9d956.svg",
+        savedImg:       "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/revup-xsm.62daabf7e446.svg",
+        mobileImg:      "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/mobile-xsm.fabe7c492143.png",
+        unknownImg:     "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/unknown-xsm.75b1d2908f1b.svg",
+    };
+
+    // see if the alertBar finsh should be displayed
+    var bAlertBarDisplayFinish = 'true' == 'true' ? true : false;
+    var bOnRankingPage = 'active' == 'active' ? true : false;
+
+    var productTier = 'Non-Profit Premium';
+    var expire = 'Jan. 23, 2020';
+
+
+
+        //contact cleanup URLs
+        var getContactNeedAttentionLst = "/rest/users/486/contacts/needs_attention_list/";
+        var getContactDetailsNeedAttention = "/rest/users/486/contacts/contactId/needs_attention/";
+        var contactCleanupHelpImg = "https://d1wo3hghzifscm.cloudfront.net/static/img/contact-cleanup.fe8b9b983ebc.png";
+
+        //edit contact URLs
+        var userContactsURL = "/rest/users/486/contacts/";
+        var isAdmin = "True";
+
+
+            var accountContactsURL = "/rest/accounts/184/contacts/";
+            var getSharedNeedAttentionLst = "/rest/accounts/184/contacts/needs_attention_list/";
+            var getSharedDetailsNeedAttention = "/rest/accounts/184/contacts/contactId/needs_attention/";
+            var accountDetailURL = "/rest/accounts/184/";
+
+
+
+
+
+    Modernizr.load({
+            test: Modernizr.input.placeholder,
+            nope: "https://d1wo3hghzifscm.cloudfront.net/static/js/jquery.placeholder.da4be625e513.js",
+            complete: function() {
+                if (!Modernizr.input.placeholder) {
+                    $('input[placeholder], textarea[placeholder]').placeholder();
+                }
+            }
+    });
+    </script>
+
+    <script>
+        $('#aboutRevupBtn').on('click', function(e) {
+            var sTmp = [];
+            var newDate = new Date();
+            var currentYear = newDate.getFullYear();
+
+
+            sTmp.push('<div class="aboutRevupDlg">');
+                sTmp.push('<div class="aboutHeaderLogo">');
+                    sTmp.push('<img src="https://d1wo3hghzifscm.cloudfront.net/static/img/Logo-Black.5fedb9390d0e.svg" />');
+                sTmp.push('</div>');
+                sTmp.push('<div class="aboutText">');
+
+                    sTmp.push('© ' + currentYear + ' RevUp Software. All rights reserved.');
+                    sTmp.push('<br>');
+                    sTmp.push('<br>');
+                    sTmp.push('This version of RevUp ' + productTier +' was licensed to ');
+                    sTmp.push('<br>');
+                    sTmp.push("Fight Hunger");
+                    sTmp.push(' on ');
+                    sTmp.push("Jan. 23, 2019" + '. It will');
+                    sTmp.push('<br>');
+                    sTmp.push('automatically renew on ' + expire);
+                    sTmp.push('. <br>');
+                sTmp.push('</div>');
+            sTmp.push('</div>');
+
+            var $aboutRevupDlg = $('body').revupDialogBox({
+                okBtnText:      'OK',
+                okBtnHandler:   function() {
+                                        $aboutRevupDlg.revupDialogBox('ok');
+                                    },
+                cancelBtnText:  '',
+                msg:                sTmp.join(''),
+                extraClass:         'aboutRevupPopup',
+                zIndex:             50,
+                width:              '420px',
+                height:             '340px',
+                isDragable:         false,
+            });
+
+            $('#upgradeSub')
+                .on('click', function(e) {
+                    $('.aboutText', $aboutRevupDlg).html('<text>Thank you for your interest in upgrading your</text><br><text>Revup license. Someone from our customer</text><br><text>service department will be in contact with you</text><br><text>shortly to help you with the upgrade process.</text>').css('margin', '50px 0px 50px 0px');
+                });
+
+            $('#endSub')
+                .on('click', function(e) {
+                    $aboutRevupDlg.revupDialogBox('close');
+                    var sTmp = [];
+                    sTmp.push('<div class="cancelRevupDlg">');
+
+                        sTmp.push('<div class="aboutHeaderLogo">');
+                            sTmp.push('<img src="https://d1wo3hghzifscm.cloudfront.net/static/img/Logo-Black.5fedb9390d0e.svg" />');
+                        sTmp.push('</div>');
+
+                        sTmp.push('<div class="aboutText">');
+                            sTmp.push('<text>Are you sure you want to cancel your RevUp subscription?</text>');
+                            sTmp.push('<br>');
+                            sTmp.push('<br>');
+                            sTmp.push('<text>If so, just click the "OK" button below and your</text></text>');
+                            sTmp.push('<br>');
+                            sTmp.push('subscription will be canceled effective October 25th 2018.');
+                        sTmp.push('</div>');
+
+                    var $cancelRevupDlg = $('body').revupDialogBox({
+                        cancelBtnText:      'cancel',
+                        cancelBtnHandler:   function() {
+                                                $cancelRevupDlg.revupDialogBox('close');
+                                            },
+                        okBtnText:          'OK',
+                        msg:                sTmp.join(''),
+                        extraClass:         'cancelRevupPopup',
+                        zIndex:             50,
+                        width:              '420px',
+                        height:             '340px',
+                        isDragable:         false,
+                    });
+
+                    $('.okBtn', $cancelRevupDlg)
+                    .on('click', function(e) {
+                        $cancelRevupDlg.revupDialogBox('close');
+                        var sTmp = [];
+                        sTmp.push('<div class="cancelRevupDlg">');
+                            sTmp.push('<div class="aboutHeaderLogo">');
+                                sTmp.push('<img src="https://d1wo3hghzifscm.cloudfront.net/static/img/Logo-Black.5fedb9390d0e.svg" />');
+                            sTmp.push('</div>');
+
+                            sTmp.push('<div class="aboutText">');
+                                sTmp.push('<text>Are you sure you want to cancel your RevUp subscription?</text>');
+                                sTmp.push('<br>');
+                                sTmp.push('<br>');
+                                sTmp.push('<text>If so, just click the "OK" button below and your</text></text>');
+                            sTmp.push('</div>');
+
+                        var $confirmCancelRevupDlg = $('body').revupDialogBox({
+                            okBtnText:          'OK',
+                           cancelBtnText:      'cancel',
+                           cancelBtnHandler:   function() {
+                                                    $confirmCancelRevupPopup.revupDialogBox('close');
+                                                },
+                            msg:                sTmp.join(''),
+                            extraClass:         'confirmCancelRevupPopup',
+                            zIndex:             50,
+                            width:              '420px',
+                            height:             '340px',
+                            isDragable:         false,
+                        });
+                    })
+                })
+        });
+
+        // credit card
+        let ccTemplate = {
+            recurlyKey: 'ewr1-YxuwjruLxXBE2SckNXzBTQ',
+            csrfToken: "k5w2PlxLnlcxZD2AEtxWiU4aKm27iOscCnFHFDNKcDtduho17dhNfA7WshJT8Je2",
+            ccUpdateUrl: accountDetailURL,
+            recurlyAccountId: "c0c1eb1421ec47e5a0966d2c2552e67e",
+        };
+
+        $('#editBillingDetails').on('click', function() {
+            let ccPopup = creditCardPopup(ccTemplate);
+            ccPopup.init();
+        })
+    </script>
+
+
+    <script>
+        $('#skinn')
+            .on('click', function(e) {
+                var skiningTemplate = {
+                    // id's
+                    accountId:          "184",
+                    seatId:             "386",
+                    defaultIconText:    "FH",
+
+                    // candidate name & image
+                    candidateName:  "Fight Hunger",
+                    candidateImage: "",
+
+                    // current skin - if one
+
+                        currentSkinId: 11,
+                        currentSkinTitle: "Political Default",
+                        currentSkinDescription: "The default skin for political product users",
+
+
+
+                    // urls
+                    logoUrl: "https://d1wo3hghzifscm.cloudfront.net/static/img/new-revup-logo.ed8d27a096ad.png",
+
+
+
+                            bannerUrl: "https://d1wo3hghzifscm.cloudfront.net/static/img/sample/revup-banner.f1287fd939b3.png",
+
+
+
+                    // ajax urls
+                    themeLstUrl: "/rest/accounts/184/skins/",
+                    themeSaveUrl: "/rest/accounts/184/skins/themeId/",
+                    setActiveSkinUrl: "/rest/accounts/184/",
+
+                    // current template
+                    currentTemplate: {
+                        settings: {"cssRules": {"backgroundColor": {"field": [{"colorFor": "backgroundDiv", "colorVal": "#e6e7e8", "colorType": "background"}], "cssRule": ".backgroundDiv"}, "inactiveTabColor": {"field": [{"colorFor": "tabInactive", "colorVal": "#72a82d", "colorType": "borderTab"}, {"colorFor": "tabInactive", "colorVal": "#8dcb3f", "colorType": "background"}], "otherFields": [{"$field": {}, "colorVal": "#8dcb3f", "colorType": "color", "cssRule": ".pageLabel", "colorFor": "tabActive"}, {"$field": {"0": {}, "length": 1, "selector": ".previewSection .tabActive", "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1, "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1}}}, "colorVal": "#8dcb3f", "colorType": "color", "colorFor": "tabActive"}, {"$field": {"0": {}, "length": 1, "selector": ".previewSection .tabActive .icon", "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1, "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1}}}, "colorVal": "hsl(86.57142857142856, 57.37704918032785%, 41.725490196078425%)", "colorType": "clearBorderTab", "cssRule": ".mainContent .container .sideNavDiv .tab.active", "colorFor": "tabInactive"}, {"$field": {"0": {}, "length": 1, "selector": ".previewSection .tabActive .icon", "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1, "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1}}}, "colorVal": "#8dcb3f", "colorType": "color", "cssRule": ".mainContent .container .sideNavDiv .tab.active a .icon", "colorFor": "tabActive icon"}, {"$field": {"0": {}, "length": 1, "selector": ".previewSection .tabActive .text", "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1, "prevObject": {"0": {"jQuery22200065575368378139041": {"events": {"revup": [{"namespace": "dialogClose", "origType": "revup", "type": "revup", "guid": 19}]}}}, "length": 1}}}, "colorVal": "#8dcb3f", "colorType": "color", "cssRule": [".mainContent .container .sideNavDiv .tab.active a .text", ".mainContent .container .sideNavDiv .tab.active a:hover .text"], "colorFor": "tabActive text"}], "cssRule": ".mainContent .container .sideNavDiv .tab"}, "scoreHighlightColor": {"field": [{"colorFor": "scoreHighlight", "colorVal": "#a4b58e", "colorType": "background"}], "cssRule": ".academicScoreColor"}, "primBtnColor": {"field": [{"colorFor": "primaryBtnField", "colorVal": "#61853a", "colorType": "border"}, {"colorFor": "primaryBtnField", "colorVal": "#79a649", "colorType": "background"}], "cssRule": [".revupBtnDefault", ".revupPrimaryBtnColor(important)", ".revupPagination .paginationDivInner .paginationPageNum.active"]}, "secBtnColor": {"field": [{"colorFor": "secBtnField", "colorVal": "#717e84", "colorType": "border"}, {"colorFor": "secBtnField", "colorVal": "#919ca1", "colorType": "background"}], "cssRule": [".revupBtnDefault.secondary", ".revupSecondaryBtnColor(important)"]}, "lnkColor": {"field": [{"colorFor": "lnkField", "colorVal": "#4d8fc2", "colorType": "color"}], "cssRule": ["a", "a:hover(important)", ".revupLnk(important)", ".revupPagination .paginationDivInner .paginationPageNum"]}}, "candidateIcon": {"candidateIconName": "Name", "candidateIconColor": "#90c3f0"}},
+                        title: "Political Default",
+                        description: "The default skin for political product users",
+
+                            id: 11,
+
+                        bannerUrl: "",
+                        logoUrl: "",
+                    },
+
+                    // type of user
+                    isStaff: false,
+
+                    // template for
+
+                        isAcademic:             false,
+                        isPoliticalCampaign:    true,
+                        isPoliticalCommittee:   false,
+
+
+                };
+                skiningTool.load(skiningTemplate);
+            });
+    </script>
+
+
+
+        <script>
+            var revupAlertOnlyNetworkSearch = false;
+            $(document).ready(function () {
+                // contact manager has it own alert loop so don't call
+                if ('' != 'active') {
+                    updateRevupAlert();
+                }
+
+                // add the button handler for the force analysis
+                forceAnalysisBtnLoad();
+                contactCleanupBtnLoad("True"  == 'True');
+
+                $('.navbar-collapse .dropdown .test').tooltipOnOverflow();
+
+            });
+        </script>
+
+
+
+
+
+    <script type="text/javascript" src="https://d1wo3hghzifscm.cloudfront.net/static/bootstrap-datepicker/js/bootstrap-datepicker.2b28bee68431.js"></script>
+    <script type="text/javascript" src="https://d1wo3hghzifscm.cloudfront.net/static/js/apps/callSheet.6f951bd7421d.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://d1wo3hghzifscm.cloudfront.net/static/js/apps/ranking.b7c7a4d5b9d8.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://d1wo3hghzifscm.cloudfront.net/static/js/apps/newFilters.129b6133c774.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://d1wo3hghzifscm.cloudfront.net/static/js/apps/prospectDetails.14575365f847.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://d1wo3hghzifscm.cloudfront.net/static/js/apps/editContact.38f3cdab6932.js" charset="utf-8"></script>
+
+
+    <script>
+    $(function () {
+        setTimeout(function () {
+            $(this).scrollTop(0);
+        }, 10);
+
+        // get the partition data
+        var partitionStart = localStorage.getItem('rankPartition-' + "386");
+        if (partitionStart) {
+            partitionStart = Number(partitionStart)
+        }
+        else {
+            partitionStart = -1;
+        }
+
+        var contactLst = [];
+        contactLst[0] = {};
+        contactLst[0].value = '1492';
+        contactLst[0].displayValue = 'All Contacts';
+
+        var rankingTemplateData = {
+            // url
+            eventProspectsUrl:          "/rest/accounts/184/events/171/prospects/",
+
+            contactDetailAnalysisUrlNew: "/rest/users/486/seats/seatId/contact_sets/contactSetId/contact_results/",
+            contactDetailUrlNew:         "/rest/users/486/seats/seatId/contact_sets/contactSetId/contact_results/contactId/",
+            exportUrlNew:                "/rest/users/486/seats/seatId/contact_sets/contactSetId/contact_results/export/",
+            filterListApiNew:            "/rest/users/486/seats/386/contact_sets/contactSetId/filters/",
+            userContact:                 "/rest/users/486/contacts/contactId/",
+            accountContact:              "/rest/accounts/184/contacts/contactId/",
+
+
+            // user settings
+            //analysisViewUserSettings: "",
+            analysisViewUserSettingsUrl: "/rest/users/486/analysis_view_settings/userSettingsId/",
+            //analysisViewSettingSet: "",
+
+            // which partition is displayed
+            partitionStart: partitionStart, // yearLst[(yearLst.length - 1)].value,
+
+            // pagination
+            paginationStart: "1",
+
+            // images
+            appleImg:       "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/apple-xsm.9eb644b71050.svg",
+            clonedImg:      "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/cloned-xsm.21041fa6c446.svg",
+            csvImg:         "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/csv-xsm.370c62c6b790.svg",
+            gmailImg:       "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/gmail-xsm.f38c7fcd827b.svg",
+            linkedInImg:    "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/linkedin-xsm.7ee6fa63461d.svg",
+            outlookImg:     "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/outlook-xsm.99553ceb118d.svg",
+            allImg:         "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/all-xsm.68509da9d956.svg",
+            savedImg:       "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/revup-xsm.62daabf7e446.svg",
+            mobileImg:      "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/mobile-xsm.fabe7c492143.png",
+            unknownImg:     "https://d1wo3hghzifscm.cloudfront.net/static/img/contactsourceicons/unknown-xsm.75b1d2908f1b.svg",
+
+            // id's
+            eventId:        "171",
+            accountId:      "184",
+            seatId:         "386",
+            isAdmin:        "True"  == 'True',
+            filterVersion:  "v3",
+
+            // call sheet notes api
+            callsheetNotesApi: "/rest/users/486/seats/386/contact_sets/contactSetId/contact_results/contactId/notes/",
+
+            // prospect details api
+            prospectDetailUrl:  "/rest/users/486/seats/seatId/contact_sets/contactSetId/contact_results/contactId/",
+
+            // call time api's
+            callTimeContact: "/rest/accounts/184/call_time_contacts/",
+
+            // list of contact lists
+            lstOfContactListApi: "/rest/users/486/seats/386/contact_sets/",
+            constactListDetailsApi: "/rest/users/486/seats/386/contact_sets/contactSetId/",
+            contactLst: contactLst,
+            contactSetId: Number("1492"),
+            contactSet: {"id": 1492, "title": "All Contacts", "description": null, "analysis": {"id": 1719, "modified": "2019-01-23T11:20:29.791928", "partition_set": {"id": 5, "label": "Giving History Since {} Election Cycle", "partition_configs": [{"id": 17, "index": 1, "label": "2018", "years_of_giving": 2}, {"id": 16, "index": 2, "label": "2016", "years_of_giving": 4}, {"id": 14, "index": 3, "label": "2014", "years_of_giving": 6}, {"id": 11, "index": 6, "label": "2008", "years_of_giving": 12}, {"id": 7, "index": 10, "label": "2000", "years_of_giving": 20}]}, "analysis_profile": 8}, "source": "", "permissions": {"results": true, "notes": true, "prospects": false, "call_time": true}, "count": 149, "created": "2019-01-23T10:53:57.337978"},
+
+            // user settings
+            userSettings: {"id": 24, "user": 486, "analysis_profile": 8, "data": {"political_colors": true}},
+
+            // candidate name & image
+            candidateName:  "Fight Hunger",
+
+              candidateImage: "",
+
+
+
+
+                isAcademic:             false,
+                isPoliticalCampaign:    true,
+                isPoliticalCommittee:   false,
+
+                bDisplayQuickFilters: true,
+                bDisplayLegendBtn: true,
+                bDisplaySettingBtn: true,
+
+                listFields: {
+                    headerSectionClass: "lstColumnHeaderDiv",
+                    headerLabelClass: "columnHeader",
+                    headerFields: [
+                        {
+                            text:      "Ranking",
+                            position:  "center",
+                            width:     "75px",
+                            style:     "padding-left: 5px; padding-right: 7px;",
+                            css:       "colRanking",
+                            minColWidth: 75,
+                            sliderAfter: true,
+                            sortable: true,
+                            sortkey: 'score',
+                            sortFirst: true,
+                        },
+                        {
+                            text:      "Name",
+                            position:  "left",
+                            width:     "calc(100% - 535px)",
+                            noPerm:    ["prospects", "call_time", "call_time-prospects"],
+                            noPermWidth:   ["calc(100% - 476px)",  "calc(100% - 516px)", "calc(100% - 544px)"],
+                            style:     "",
+                            css:       "colName",
+                            minColWidth: 185,
+                            sliderAfter: true,
+                            resizePercent: 100,
+                            sortable: false,
+                        },
+                        {
+                            text:      "Gave To",
+                            position:  "center",
+                            width:     "140px",
+                            style:     "padding-left: 30px; text-align: justify;",
+                            css:       "colDonation",
+
+                            minColWidth: 90,
+                            sliderAfter: true,
+                            sortable: false,
+
+                        },
+
+                        {
+                            text:      "Giving History",
+                            position:  "right",
+                            width:     "140px",
+                            style:     "margin-left: 0px; margin-right: 0px; padding-left: 6px; padding-right: 28px;",
+                            css:       "colGiving",
+
+                            minColWidth: 130,
+                            sliderAfter: true,
+                            sliderPermissions: ['prospects', 'call_time', 'call_time-prospects'],
+                            sortable: true,
+                            sortkey: 'giving',
+                        },
+                        {
+                            text:      "Prospect List",
+                            position:  "center",
+                            width:     "85px",
+                            style:     "",
+                            css:       "colPropectSwitch",
+                            permission: "prospects",
+                            sliderAfter: true,
+
+                            minColWidth: 85,
+                            sortable: false,
+                        },
+                        {
+                            text:      "Call Time",
+                            position:  "center",
+                            width:     "60px",
+                            style:     "",
+                            css:       "colCallTimeSwitch",
+                            permission: "call_time",
+
+                            minColWidth: 50,
+                            sortable: false,
+                        },
+                        {
+                            text:      "Prospect List",
+                            position:  "center",
+                            width:     "85px",
+                            style:     "",
+                            css:       "colPropectSwitch",
+                            permission: "call_time-prospects",
+                            enablePermission: 'prospects',
+                            sliderAfter: true,
+
+                            minColWidth: 85,
+                            sortable: false,
+                        },
+                        {
+                            text:      "Call Time",
+                            position:  "center",
+                            width:     "60px",
+                            style:     "",
+                            css:       "colCallTimeSwitch",
+                            permission: "call_time-prospects",
+                            enablePermission: 'call_time',
+
+                            minColWidth: 50,
+                            sortable: false,
+                        },
+                    ],
+
+                    // entryFields
+                    //      position -> position in column
+                    //      width -> width of the column (remember units)
+                    //      style -> style for the column entry
+                    //      css -> additional CSS for the column
+                    //      type -> how to display the data
+                    //          attrubute based on type
+                    //          type -> "rankingField"
+                    //              scoreNumSection -> section to find the score in, can be blank
+                    //              scoreNumField -> field in scoreNumSection holding score
+                    //              scoreColorSection -> section hold the score color value
+                    //              scoreColorField -> field in the scoreColorSection
+                    //              scoreBackground -> background color of the score
+                    //          type -> name
+                    //              dataSection -> section holding the data
+                    //              dataField -> single or arrary of fields in the section for displaying name
+                    //              dataDivClass -> extra class for displaying the column value
+                    entryCSS:       "",     // values for each entry
+                    entryStyle:     "",
+                    entryAttr:      "",
+                    entryClass:     "",
+                    entryFields: [
+                        {position:  "center",
+                         width:     "75px",
+                         style:     "margin-left: 0px; margin-right: 0px; padding-left: 5px; padding-right: 7px;",
+                         css:       "colRanking sortable",
+                         type:      "rankingField",
+                         scoreNumSection: "",
+                         scoreNumField: "score",
+                         scoreColorSection:   "key_signals",
+                         scoreColorField:     "political_spectrum",
+
+                         minColWidth: 75,
+                         sliderAfter: true,
+                        },
+                        {position:  "left",
+                         width:     "calc(100% - 535px)",
+                         noPerm:    ["prospects", "call_time", "call_time-prospects"],
+                         noPermWidth:   ["calc(100% - 465px)",  "calc(100% - 375px)",  "calc(100% - 530px)"],
+                         style:     "margin-top: 7px;",
+                         css:       "colName",
+                         type:      "name",
+                         dataSection:   "contact",
+                         dataField:     ["first_name", "last_name"],
+                         dataDivClass:  "nameBtn",
+
+                         minColWidth: 185,
+                         sliderAfter: true,
+                         resizePercent: 100,
+                        },
+                        {position:  "",
+                         width:     "150px",
+                         style:     "",
+                         css:       "colDonation",
+                         type:      "givingIcon",
+                         dataSection:   "key_signals",
+                         sliderAfter: true,
+                         extraData: {
+
+                                candidateImage: ""
+
+                        }},
+                        {position:  "right",
+                         width:     "130px",
+                         style:     "margin-left: 0px; margin-right: 0px; padding-left: 6px; padding-right: 28px;  line-height: 25px;",
+                         css:       "colGiving sortable",
+                         type:      "dollar",
+                         dataSection:   "key_signals",
+                         dataField:     "giving",
+
+                         minColWidth: 130,
+                         sliderAfter: true,
+                         sliderPermissions: ['prospects', 'call_time', 'call_time-prospects'],
+                        },
+                        {position:  "center",
+                         width:     "85px",
+                         style:     "",
+                         css:       "colPropectSwitch",
+                         type:      "propectSwitch",
+                         dataSection:   "prospect",
+                         dataField:     "invited",
+                         dataDivClass:  "colPropectSwitch",
+                         colDivAttr:    [{name: "prospectId",
+                                          section: "prospect",
+                                          field: "prospect_id"}
+                                        ],
+                         permission: "prospects",
+                         sliderAfter: false,
+                         minColWidth: 85,
+                        },
+                        {position:  "center",
+                         width:     "60px",
+                         style:     "",
+                         css:       "colCallTimeSwitch",
+                         type:      "callTimeSwitch",
+                         dataSection:   "call_time_contact",
+                         //dataField:     "invited",
+                         dataDivClass:  "colPropectSwitch",
+                         colDivAttr:    [{name: "callManagerContactId",
+                                          section: "call_time_contact",
+                        //                  field: "prospect_id"}
+                                        }],
+
+                        permission: 'call_time',
+                        sliderAfter: true,
+                         minColWidth: 85,
+                        },
+                        {position:  "center",
+                         width:     "85px",
+                         style:     "",
+                         css:       "colPropectSwitch",
+                         type:      "propectSwitch",
+                         dataSection:   "prospect",
+                         dataField:     "invited",
+                         dataDivClass:  "colPropectSwitch",
+                         colDivAttr:    [{name: "prospectId",
+                                          section: "prospect",
+                                          field: "prospect_id"}
+                                        ],
+                         permission: "call_time-prospects",
+                         enablePermission: 'prospects',
+                         sliderAfter: true,
+                         minColWidth: 85,
+                        },
+                        {position:  "center",
+                         width:     "60px",
+                         style:     "",
+                         css:       "colCallTimeSwitch",
+                         type:      "callTimeSwitch",
+                         dataSection:   "call_time_contact",
+                         //dataField:     "invited",
+                         dataDivClass:  "colPropectSwitch",
+                         colDivAttr:    [{name: "callManagerContactId",
+                                          section: "call_time_contact",
+                        //                  field: "prospect_id"}
+                                        }],
+
+                        permission: 'call_time-prospects',
+                        enablePermission: 'call_time',
+                        sliderAfter: true,
+                        minColWidth: 85,
+                        }
+                    ],
+                },
+
+                detailSection: {
+                    displaySections: {
+                        name: {
+                            // fields
+                            //      display -> boolean
+                            // photo section
+                            //      section -> data section to use
+                            //      imgField -> field to get the image url in the section
+                            //      linkInProfile -> field to get the linkIn profile for the hyper link
+                            //      photoSec -> which photo soruce should be displayed
+                            //      photoHeight -> height of the photo
+                            //      photoWidth -> width of the photo
+                            // score section
+                            //      scoreColorSection -> data section to use
+                            //      scoreColorField -> field in the scoreColorSection
+                            //      scoreColorClass -> color class to use (if blank color should be set by scoreColorStyle)
+                            //      scoreColorStyle -> style to use for the color section
+                            //      scoreNumSection -> section to use for the score num
+                            //      scoreNumField -> field in the scoreNumSection
+                            // name line 1
+                            //      name1Section -> data section to use
+                            //      name1Field -> field or array of fields from section to display
+                            //      name1FieldSeperator -> if array character to use as seperator
+                            // name line 2 same as name 1
+                            // email address to display
+                            //      emailSection -> data section to use
+                            //      emailField -> field of section to display
+                            //      emailFieldDisplay -> sub field in field to displaySections
+                            //      emailMaxDisplay -> max number of email to display
+                            display: true,
+                            photoProfileLink: {
+                                section: 'contact',
+                                imgData: 'image_urls',
+                                profileData: 'external_profiles',
+                                photoSrc: 'LinkedIn',
+                                profileSrc: 'LinkedIn',
+                                photoWidth: '56px',
+                                photoHeight: '56px',
+                            },
+                            score: {
+                                section: '',
+                                field: 'score',
+                                colorClass: '',
+                                //colorStyle: 'background:#a4b58e',
+                            },
+                            scoreColor: {
+                                section:   "key_signals",
+                                field:     "political_spectrum",
+                            },
+                            firstName: {
+                                section: 'contact',
+                                field: 'first_name',
+                            },
+                            lastName: {
+                                section: 'contact',
+                                field: 'last_name',
+                            },
+                            email: {
+                                section: 'contact',
+                                field: 'email_addresses',
+                                displayField: 'address',
+                                maxDisplay: 3
+                            },
+                            phone: {
+                                section: 'contact',
+                                field: 'phone_numbers',
+                                firstOfType: ['Cell', 'Home', 'Work'],
+                                labelKey: 'label',
+                                valKey: 'number',
+                                bfirstNoneBlank: false,
+                                trimOffFront: 7,
+                            },
+                        },
+                        contactDetails: false,
+                        contribution: true,
+                        callSheetBtn: {
+                            // fields
+                            //      display -> boolean
+                            //      btnLabel -> text in the button
+                            btnlabel: 'Generate Call Sheet',
+
+                                display: false,
+
+                        },
+                        pieGraph: {
+                            // fields
+                            //      display -> boolean
+                            //      trendingSection -> section where to get trending data
+                            //      trendingField -> field in the trendingSection
+                            //      politicalAmount -> if zero message no political giving
+                            display: true,
+                            trendingSection: "key_signals",
+                            trendingField: "political_spectrum",
+                            politicalAmount: "political_giving",
+                        },
+                        givingHistoryGraph: false,
+                        contributionGraph: false,
+                    },
+                    amounts: {
+                        title: "Contribution",
+                        sections: [
+                            {title: "My Campaign",
+                             featureStart: "Client contributions",
+                             maxDisplay: 3,
+                             sectionClass: 'myCamp'
+                            },
+                            {title: "Correlated Campaigns",
+                             featureStart: "Key Contributions",
+                             is_ally: true,
+                             maxDisplay: 5,
+                             sectionClass: 'myCamp'
+                            },
+                            {title: "OppositionKey Contributions",
+                             featureStart: "Key Contributions",
+                             is_ally: false,
+                             maxDisplay: 5,
+                             sectionClass: 'myCamp'
+                            }
+                        ]
+                    }
+                },
+
+
+        };
+
+        rankingDetails.display(rankingTemplateData, $(".newRankingDiv"));
+        })
+    </script>
+
+        <script>
+            // see about updating the ranking link
+            var contactSetId = localStorage.getItem('rankContactSetId-' + "386");
+            if (contactSetId) {
+                var $rankingTab = $('.sideNavDiv .rankingTab a');
+                $rankingTab.attr('href', $rankingTab.attr('href') + "?contact_set=" + contactSetId)
+            }
+            $( document ).ready(function() {
+                var d = new Date();
+                var n = d.getFullYear();
+                $('.currentYear').append(n);
+            });
+        </script>
+
+
+
+
+    </div>
+
+
+
+<!-- start Mixpanel -->
+<script type = "text/javascript">
+
+    var mixpanel = {};
+    mixpanel.track = function() {
+
+    }
+
+    mixpanel.register = function() {
+
+    }
+
+    mixpanel.identify = function() {
+
+    }
+
+</script>
+<!-- end Mixpanel -->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+      ga('create', 'UA-48460997-3', 'auto');
+
+
+  ga('send', 'pageview');
+
+</script>
+
+{% load static %}
+<script src="{% static "rankings/Ranking.js" %}"></script>
+</body>
+</html>
