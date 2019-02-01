@@ -1190,6 +1190,12 @@ h.appendChild(s);
 
 </script>
 
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            Ranking.init('rankings');
+          });
+        </script>
+
 {% load static %}
 <script src="{% static "rankings/Ranking.js" %}"></script>
 </body>
